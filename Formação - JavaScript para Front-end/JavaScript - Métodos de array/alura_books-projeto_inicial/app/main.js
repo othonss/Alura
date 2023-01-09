@@ -1,5 +1,7 @@
 let livros = []
 const endpointDaAPI = 'https://guilhermeonrails.github.io/casadocodigo/livros.json'
+const botoes = document.querySelectorAll('.btn')
+
 getBuscarLivrosDaAPI()
 const elementoParaInserirLivros = document.getElementById('livros')
 
@@ -13,6 +15,7 @@ async function getBuscarLivrosDaAPI(){
 }
 
 function exibirOsLivrosNaTela(listaDeLivros){
+    elementoParaInserirLivros.innerHTML = ''
     listaDeLivros.forEach(livro => {
       elementoParaInserirLivros.innerHTML += `
         <div class="livro">
@@ -37,4 +40,13 @@ function aplicarDesconto(livros){
         return {...livro, preco: livro.preco - (livro.preco * desconto)} // NOVIDADE -> operador ...
     })
     return livrosComDesconto
+}
+
+botoes.forEach(btn => btn.addEventListener('click', filtrarLivros))
+
+function filtrarLivros(){
+    const elementoBtn = document.getElementById(this.id)
+    const categoria = elementoBtn.value
+    let livrosFiltrados = livros.filter(livro => livro.categoria == categoria)
+    exibirOsLivrosNaTela(livrosFiltrados)
 }
