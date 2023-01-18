@@ -83,6 +83,20 @@
       "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
       "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "id": 12
+    },
+    {
+      "titulo": "Conheça o canal da Alura!",
+      "descricao": "47 mil visualizações",
+      "url": "https://www.youtube.com/embed/94yuIVdoevc",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 13
+    },
+    {
+      "titulo": "Guia de Carreira Flutter - #HipsterPontoTube",
+      "descricao": "4 mil visualizações",
+      "url": "https://www.youtube.com/embed/ofuHDFOcgr8",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 14
     }
   ]
 }
