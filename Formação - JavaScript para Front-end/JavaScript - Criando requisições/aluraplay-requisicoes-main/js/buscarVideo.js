@@ -7,12 +7,16 @@ async function buscarVideo(evento){
     const busca = await conectaApi.buscaVideo(dadosDePesquisa)
 
     const lista = document.querySelector("[data-lista]")
-    
+
     while (lista.firstChild){
         lista.removeChild(lista.firstChild)
     }
 
     busca.forEach(elemento => lista.appendChild(constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem)))
+
+    if (busca.length == 0){
+        lista.innerHTML = "Não existem vídeos com esse termo."
+    }
 }
 
 const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]")
