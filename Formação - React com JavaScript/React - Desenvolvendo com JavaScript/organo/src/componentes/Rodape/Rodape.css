@@ -1,0 +1,29 @@
+.footer {
+    background-color: #6278F7;
+    background-image: url(../../../public/imagens/fundo.png);
+    background-size: contain;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.footer .sociais{
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+}
+
+.footer .sociais img{
+    width: 28px;
+}
+
+.footer .logotipoOrgano img{
+    width: 150px;
+}
+
+.footer .dev p{
+    color: #FFFFFF;
+    font-size: 18px;
+}
